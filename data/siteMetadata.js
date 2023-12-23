@@ -8,7 +8,7 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.attackonmorty.dev/',
   siteRepo: 'https://github.com/AttackOnMorty/blog',
-  siteLogo: '/static/images/avatar.jpeg',
+  siteLogo: '/static/images/logo.jpeg',
   socialBanner: '',
   mastodon: '',
   email: '',
