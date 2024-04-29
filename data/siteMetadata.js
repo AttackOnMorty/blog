@@ -11,7 +11,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.jpeg',
   socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
-  // email: 'ErenJagerM@outlook.com',
+  email: 'ErenJagerM@outlook.com',
   github: 'https://github.com/AttackOnMorty',
   // twitter: 'https://twitter.com/AttackOnMorty',
   // facebook: 'https://facebook.com',
