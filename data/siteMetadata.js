@@ -6,7 +6,7 @@ const siteMetadata = {
   description: 'Personal blog by Luke Mao.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://www.attackonmorty.dev/',
+  siteUrl: 'https://www.attackonmorty.com/',
   siteRepo: 'https://github.com/AttackOnMorty/blog',
   siteLogo: '/static/images/logo.jpeg',
   socialBanner: '/static/images/twitter-card.png',
