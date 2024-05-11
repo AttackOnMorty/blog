@@ -32,13 +32,13 @@ Robert mentioned in his paper:
 
 > An algorithm can be regarded as consisting of a logic component, which specifies the knowledge to be used in solving problems, and a control component, which determines the problem-solving strategies by means of which that knowledge is used. The logic component determines the meaning of the algorithm whereas the control component only affects its efficiency. The efficiency of an algorithm can often be improved by improving the control component without changing the logic of the algorithm. We argue that computer programs would be more often correct and more easily improved and modified if their logic and control aspects were identified and separated in the program text.
 
-There are two important points I want to elaborate on.
+There are two important points I want to elaborate on. One is the role of control in the algorithm, and the other is how to write good programs.
 
-#### The Role of Control on Logic
+#### The Role of Control on Algorithm
 
 > The efficiency of an algorithm can often be improved by improving the control component without changing the logic of the algorithm.
 
-It means the `Control only affects the efficiency of the Logic`. For example:
+It means the `Control only affects the efficiency of the Algorithm. It doesn't change the Logic`. For example, we have a simple problem:
 
 ```plain
 Given an integer n, calculate n!.
@@ -157,9 +157,9 @@ The essence of programming is:
 Key takeaways:
 
 - All programming methods revolve around **Logic**, **Control**, and **Data Structure**.
-- **Logic** and **Control** are the key.
-- **Control** only affects the efficiency of **Logic**.
-- Why programs are complex?
+- **Logic** and **Control** are more important than **Data Structure**.
+- **Control** only affects the efficiency of **Algorithm**. It doesn't change the **Logic**.
+- The reasons why the program is complex are that:
   - **Logic** (business logic) is complex.
   - **Logic** and **Control** are mixed together.
 - Effective separation of **Logic** and **Control** is the key to writing good programs.
