@@ -32,16 +32,16 @@ Robert mentioned in his paper:
 
 > An algorithm can be regarded as consisting of a logic component, which specifies the knowledge to be used in solving problems, and a control component, which determines the problem-solving strategies by means of which that knowledge is used. The logic component determines the meaning of the algorithm whereas the control component only affects its efficiency. The efficiency of an algorithm can often be improved by improving the control component without changing the logic of the algorithm. We argue that computer programs would be more often correct and more easily improved and modified if their logic and control aspects were identified and separated in the program text.
 
-There are two important points I want to elaborate on. One is the role of control in the algorithm, and the other is how to write good programs.
+There are two important points I want to elaborate on. One is the role of Control in Algorithm, and the other is how to write good programs.
 
-#### The Role of Control on Algorithm
+#### The Role of Control in Algorithm
 
 > The efficiency of an algorithm can often be improved by improving the control component without changing the logic of the algorithm.
 
-It means the `Control only affects the efficiency of the Algorithm. It doesn't change the Logic`. For example, we have a simple problem:
+It means `Control only affects the efficiency of Algorithm. It doesn't change Logic`. For example, we have a simple problem:
 
 ```plain
-Given an integer n, calculate n!.
+Given an integer n, calculate n!
 ```
 
 In this program:
@@ -105,11 +105,11 @@ function validate(data) {
 }
 ```
 
-We can see we mixed the logic and control in the function. It will become more and more complex as the business logic grows.
+Although it's a small program, we can still see that logic and control are mixed in the function. It will become more and more complex as the business logic grows.
 
-Logic is the lower limit of program complexity. Then, to control the program, we need to create a lot of control codes, so the mixture of Logic + Control forms the final complexity of the program.
+Logic is the floor of program complexity. Then, to control the program, we need to create a lot of control code. So the mixture of Logic + Control forms the final complexity of the program.
 
-Actually, we can create a DSL ([Domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language)) + a DSL parser to separate the logic and control.
+How can we improve the above code? Actually, we can create a DSL ([Domain-specific language](https://en.wikipedia.org/wiki/Domain-specific_language)) + a DSL parser to separate the logic and control.
 
 > Except DSL, there are many other ways to separate Logic and Control, such as State Machine, Programming Paradigm, etc.
 
@@ -124,7 +124,7 @@ const rules = [
 const result = validate(data, rules)
 ```
 
-In this way, DSL (rules) describes the logic, and the `validate` method becomes the control. The code now looks more readable and maintainable.
+In this way, DSL (`rules` variable) describes the logic, and the `validate` method becomes the control. The code now looks more readable and maintainable.
 
 ## The Essence of Programming
 
@@ -142,7 +142,7 @@ All programming methods actually revolve around these 3 things. For example:
 - Like `Map/Reduce/Filter` in functional programming, they are all kind of a **control**. The Lambda expression passed to these control modules is the **logic** of the problem we want to solve, and together they form an **algorithm**. Finally, we put the data in a **data structure** for processing, and it finally became our **program**.
 - Like `Program to an interface, not an implementation` in object-oriented programming. Interfaces are abstractions of logic. The real **logic** is placed in different embodiment classes. **Controls** such as polymorphism or dependency injection are used to complete the manipulation of **data** in different situations.
 
-All programming languages are trying to do the following things:
+All programming languages (or programming paradigms) are trying to do the following things:
 
 - **Control** can be standardized. For example: traversing data, searching for data, multi-threading, concurrency, asynchronous, etc., can all be standardized.
 - **Control** needs to process data, standardizing **Control** requires standardizing **Data Structure**. We can solve this problem through generic programming.
@@ -158,7 +158,7 @@ Key takeaways:
 
 - All programming methods revolve around **Logic**, **Control**, and **Data Structure**.
 - **Logic** and **Control** are more important than **Data Structure**.
-- **Control** only affects the efficiency of **Algorithm**. It doesn't change the **Logic**.
+- **Control** only affects the efficiency of **Algorithm**. It doesn't change **Logic**.
 - The reasons why the program is complex are that:
   - **Logic** (business logic) is complex.
   - **Logic** and **Control** are mixed together.
